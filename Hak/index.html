@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <style>
+        body {
+            background-color: rgb(210, 248, 248);
+            padding-left: 500px;
+
+        }
+
+        .glx {
+            font-size: 105px;
+            padding: 0px 200px;
+            color: rgb(181, 248, 155);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: relative;
+            top: 70px;
+        }
+
+
+
+
+        .input {
+            position: relative;
+            left: 600px;
+            top: 450px;
+        }
+
+        .blabla {
+            display: block;
+            background: none;
+            border: none;
+            border-bottom: 1px solid gray;
+
+            outline: none;
+        }
+
+        button {
+            border-radius: 50px;
+            background: none;
+            border: 1px solid gray;
+            padding: 10px 25px;
+        }
+
+        button:hover {
+            box-shadow: 0 0 10px rgb(100, 98, 98);
+            cursor: pointer;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .about {
+            position: relative;
+            top: 100px;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="glx">Game of life</h1>
+    <!-- <table>
+        <tr>
+            <th>Անվանում</th>
+            <th>Տեսքը</th>
+            <th>նկարագրություն</th>
+        </tr>
+        <tr>
+            <td> <h1> Խոտ</h1></td>
+            <td><img src="Pure_Green.jpg" alt=""></td>
+            <td>
+                <h3>Միայն ունակ է բազմանալուն</h3>
+            </td>
+        </tr>
+
+    </table> -->
+
+    <div class="input">
+        <h2 class="text-black-50">Enter</h2>
+      
+        <input id="message" class="blabla" type="number">
+
+        <br>
+        <br>
+        <input id="mes" class="blabla" type="number">
+        <br>
+        <br>
+        <input id="mess" class="blabla" type="number">
+        <br>
+        <br>
+        <input id="me" class="blabla" type="number">
+        <br>
+        <br>
+        <input id="m" class="blabla" type="number">
+        <br>
+        <br>
+        <button onclick = "fun()" id="submit" type="button" class="btn btn-primary">Primary</button>
+    </div>
+   
+</body>
+
+</html>
