@@ -11,7 +11,7 @@ app.use(express.static("."));
 app.get('/', function (req, res) {
     res.redirect('index.html');
 });
-server.listen(3000);
+server.listen(2000);
 
 
 
@@ -98,7 +98,7 @@ function generate(a, xot, xotaker, dava, melkon, girl, boy) {
 }
 
 
-function fun(data){
+function handleSubmit(data){
 
 
  
@@ -211,9 +211,23 @@ function game() {
 }
 setInterval(game, 1000);
 
+            
+
 io.on('connection', function (socket) {
     objectcreation();
-    socket.on ("bar", fun)
+    socket.on ("bar", handleSubmit)
+    socket.on("hey",function hey(){
+        val ={
+            grass : grasssses.length,
+            grassEater : grasseaterArr.length,
+            davajan : davajan.length,
+            melkon : melkon.length,
+            girl : girl.length,
+            boy : boy.length
+        }
+        
+        socket.emit("h",val)
+    })
    
 })
 

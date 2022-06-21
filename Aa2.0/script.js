@@ -6,10 +6,41 @@ function main() {
     var input2 = document.getElementById('mess');
     var input3 = document.getElementById('me');
     var input4 = document.getElementById('m');
-    button = document.getElementById('submit');
+    button = document.getElementById('submit')
+    sub = document.getElementById("sub");
 
+    function hey() {
+        socket.emit("hey")
+        socket.on("h", function (val) {
+            var p1 = document.createElement("p");
+            var element1 = document.getElementById("div1");
+            element1.appendChild(p1);
+            var p2 = document.createElement("p");
+            var element2 = document.getElementById("div2");
+            element2.appendChild(p2);
+            var p3 = document.createElement("p");
+            var element3 = document.getElementById("div3");
+            element3.appendChild(p3);
+            var p4 = document.createElement("p");
+            var element4 = document.getElementById("div4");
+            element4.appendChild(p4);
+            var p5 = document.createElement("p");
+            var element5 = document.getElementById("div5");
+            element5.appendChild(p5);
+            var p6 = document.createElement("p");
+            var element6 = document.getElementById("div6");
+            element6.appendChild(p6);
+            p1.innerText = val.grass;
+            p2.innerText = val.grassEater;
+            p3.innerText = val.davajan;
+            p4.innerText = val.melkon;
+            p5.innerText = val.girl;
+            p6.innerText = val.boy;
+        })
 
+    }
 
+ setInterval(hey , 5000)
     function handleSubmit() {
         data = {
             val: input.value,
@@ -27,7 +58,7 @@ function main() {
     }
 
 
-
+   
     button.onclick = handleSubmit;
 
 }
@@ -46,7 +77,8 @@ function nkarel(matrix, data) {
 
 
     socket.on("weather", function (data) {
-        weath = data;
+        weath = data; 
+       
         if (weath == "spring") {
             document.body.style.backgroundColor = "#ccffff";
 
@@ -55,15 +87,15 @@ function nkarel(matrix, data) {
             document.body.style.backgroundColor = "#99e6ff";
 
         }
-      else  if (weath == "summer") {
+        else if (weath == "summer") {
             document.body.style.backgroundColor = "#87CEFA";
 
         }
-      else  if (weath == "autumn") {
+        else if (weath == "autumn") {
             document.body.style.backgroundColor = "#b3cccc";
 
-        } 
-      
+        }
+
     })
     for (var y = 0; y < matrix.length; y++) {
         for (var x = 0; x < matrix[y].length; x++) {
