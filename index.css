@@ -1,0 +1,48 @@
+body {
+
+    padding-left: 500px;
+
+}
+
+.glx {
+    font-size: 105px;
+    padding: 0px 200px;
+    color: rgb(12, 0, 173);
+
+    position: relative;
+    top: 10px;
+}
+
+
+
+
+.input {
+    position: relative;
+    left: 600px;
+    top: 370px;
+}
+
+
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+table {
+    position: absolute;
+    top: 200px;
+    left: 450px;
+}
+@media(max-width:1200px){
+table{
+    top:1300px;
+}
+
+
+
+
+
+}
